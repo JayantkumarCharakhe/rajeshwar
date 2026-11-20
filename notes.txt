@@ -1,0 +1,37 @@
+steps 
+
+1. create new folder with proper name in  folder
+
+2. open cmd and install opencode using npm like " npm i -g opencode-ai " this installing the opencode https://opencode.ai/
+
+3. open the open code ai "opencode" 
+
+4.then type "i want to make the replica of this website : https://mdcomputers.in/ . make sure the design is similar to this website 
+
+5. click on tab button build to plan then click enter button
+
+6. Openai asking some quesions answer it then plan is ready then click tab button to change build mode then click enter button  
+
+
+
+
+<div class="map">
+    <iframe 
+        src="https://maps.app.goo.gl/4efKp2ExYQYzijWH8"
+        src="https://www.google.com/maps?q=Rajeshwar+Computers+Akola&output=embed"
+        width="150%"
+        height="200"
+        style="border:0;"
+        loading="lazy">
+    </iframe>
+</div>
+
+
+
+ <!-- <iframe 
+                            src="https://www.google.com/maps?q=Rajeshwar+Computers+Akola&output=embed"
+                            width="135%"
+                            height="200"
+                            style="border:0;"
+                            loading="lazy">
+                        </iframe> -->
