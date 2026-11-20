@@ -1,0 +1,456 @@
+/* Responsive layout fixes for Rajeshwar Computers.
+   Load this file AFTER css/style.css so these rules take priority. */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img, iframe, video {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+.container,
+.navbar,
+.hero-content,
+.contact-container,
+.footer-content {
+    width: min(100% - 32px, 1200px);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 72px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    gap: 10px;
+}
+
+.logo img {
+    max-width: 54px;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    overflow-wrap: anywhere;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: clamp(12px, 2vw, 28px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: clamp(320px, 55vw, 620px);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.35rem);
+}
+
+section {
+    min-width: 0;
+    padding-top: clamp(42px, 6vw, 76px);
+    padding-bottom: clamp(42px, 6vw, 76px);
+}
+
+.products-grid,
+.services-grid,
+.gallery-grid,
+.contact-container,
+.footer-content,
+.brands-grid,
+.category-grid {
+    min-width: 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    min-width: 0;
+    height: 100%;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-info {
+    overflow-wrap: anywhere;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+    gap: 14px;
+}
+
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(24px, 5vw, 60px);
+    align-items: start;
+}
+
+.contact-info,
+.contact-form,
+.contact-form form,
+.form-group {
+    min-width: 0;
+}
+
+.contact-info p,
+.contact-info a,
+.footer-section li {
+    overflow-wrap: anywhere;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.category-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 15px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.category-grid > div {
+    min-width: 0;
+}
+
+.category-grid img {
+    width: 60px;
+    max-width: 100%;
+    height: 60px;
+    object-fit: contain;
+}
+
+.brands-grid {
+    display: grid !important;
+    grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+    gap: 15px;
+    margin: 0 0 40px !important;
+}
+
+.brand-item {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-item img {
+    display: block;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.map-frame {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 280px;
+    border: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 28px;
+}
+
+.footer-section {
+    min-width: 0;
+}
+
+.btn,
+button {
+    max-width: 100%;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .category-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+    .container,
+    .navbar,
+    .hero-content,
+    .contact-container,
+    .footer-content {
+        width: min(100% - 28px, 100%);
+    }
+
+    .navbar {
+        position: relative;
+        min-height: 64px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo img {
+        max-width: 44px;
+    }
+
+    .logo-text {
+        font-size: clamp(15px, 4vw, 19px);
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 38px;
+        height: 38px;
+        padding: 7px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+    }
+
+    .nav-links {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 0;
+    }
+
+    /* Supports the common active class used by the existing menu-toggle script. */
+    .nav-links.active,
+    .nav-links.show,
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li,
+    .nav-links a {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 8px;
+    }
+
+    .hero {
+        min-height: 340px;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .hero h1 {
+        font-size: clamp(28px, 8vw, 42px);
+    }
+
+    .section-title {
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center;
+    }
+
+    .products-grid,
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .product-info {
+        padding: 14px;
+    }
+
+    .product-info h3,
+    .service-card h3 {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+
+    .product-info p,
+    .service-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        height: clamp(125px, 38vw, 190px);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 10px;
+    }
+
+    .category-grid > div {
+        padding: 12px 6px !important;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 12px;
+    }
+
+    .contact-container {
+        gap: 28px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
+    }
+}
+
+/* Narrow phones */
+@media (max-width: 420px) {
+    .products-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        max-height: 230px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .map-frame {
+        min-height: 240px;
+    }
+}
